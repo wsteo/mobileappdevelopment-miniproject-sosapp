@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LOGINREGISTERSOS">
-        <activity android:name=".EmergencyTutorialVideo"></activity>
+        <activity android:name=".Alarm_sound"></activity>
+        <activity android:name=".EmergencyTutorialVideo" />
         <activity android:name=".Login1" />
         <activity android:name=".Register1" />
         <activity android:name=".MainActivity">
