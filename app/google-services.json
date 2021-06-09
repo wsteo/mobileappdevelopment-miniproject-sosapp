@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "336497180904",
+    "project_id": "sosapp-e2717",
+    "storage_bucket": "sosapp-e2717.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336497180904:android:c35f3a8b1242049311495d",
+        "android_client_info": {
+          "package_name": "com.example.loginregistersos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "336497180904-30ure9rnvjip6l5lr70rfgol2d7dfs43.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAR3jBX3FJpp50W0ISacitsYzZdtKdgQco"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "336497180904-30ure9rnvjip6l5lr70rfgol2d7dfs43.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

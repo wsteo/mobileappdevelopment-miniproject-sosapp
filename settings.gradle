@@ -1,0 +1,2 @@
+rootProject.name = "LOGINREGISTERSOS"
+include ':app'
