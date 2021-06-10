@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EmergencyMessage">
+    tools:context=".EditEmergencyMessage">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,28 +22,27 @@
             android:textSize="30dp"/>
 
         <EditText
-            android:id="@+id/editText_ViewOnlyEmergencyTextMessage"
+            android:id="@+id/editText_EmergencyTextMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:lines="10"
             android:maxLines="15"
             android:minLines="10"
-            android:enabled="false"
+            android:enabled="true"
             android:scrollbars="vertical"
             android:gravity="start"/>
 
         <Button
-            android:id="@+id/button_EditEmergencyMessage"
+            android:id="@+id/button_SaveEditedEmergencyMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Edit Emergency Message" />
+            android:text="Save Edited Emergency Message" />
 
         <Button
-            android:id="@+id/button_ViewEmergencyContact"
+            android:id="@+id/button_Back2EmergencyMessageActivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="View Emergency Contact" />
-
+            android:text="Back" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
