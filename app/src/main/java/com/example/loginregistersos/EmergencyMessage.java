@@ -23,6 +23,8 @@ public class EmergencyMessage extends AppCompatActivity {
         buttonEditEmergencyMessage = findViewById(R.id.button_EditEmergencyMessage);
         buttonViewEmergencyContacts = findViewById(R.id.button_ViewEmergencyContact);
 
+
+
         buttonEditEmergencyMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
