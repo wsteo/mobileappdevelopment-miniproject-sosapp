@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">LOGINREGISTERSOS</string>
+    <string name="app_name">SOS Emergency App</string>
     <string name="title_activity_gps">Map</string>
 </resources>

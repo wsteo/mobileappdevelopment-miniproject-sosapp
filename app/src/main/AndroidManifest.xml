@@ -43,7 +43,7 @@
         <activity android:name=".Register1" />
         <!--<activity android:name=".MainActivity"/>-->
         <activity android:name=".Search_ScammerRecord"/>
-        <activity android:name=".ReportPhone">
+        <activity android:name=".ReportPhone"/>
         
         <activity android:name=".LandingPage">
             <intent-filter>
