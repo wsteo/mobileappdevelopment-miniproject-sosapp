@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1A223F"
+    android:id="@+id/lay"
+    tools:context=".Alarm_sound">
+
+    <TextView
+        android:id="@+id/tv_siren"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-black"
+        android:text="SIREN SOUND"
+        android:textColor="#DD1312"
+        android:layout_marginTop="30dp"
+        android:textSize="40dp" />
+
+
+    <Switch
+        android:id="@+id/sw_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:thumbTint="@drawable/thump"
+        app:trackTint="@drawable/track"
+        android:layout_gravity="center"
+        android:layout_marginTop="75dp"
+        android:scaleX="5"
+        android:scaleY="5"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Button
+        android:id="@+id/btn_siren1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="+ Yelp"
+        android:layout_gravity="center"
+        android:scaleX="1.8"
+        android:scaleY="1.8"
+
+        />
+
+    <Button
+        android:id="@+id/btn_siren2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="+ Hi Lo"
+        android:layout_gravity="center"
+        android:scaleX="1.8"
+        android:scaleY="1.8"
+        />
+
+
+
+
+</LinearLayout>

@@ -1,33 +1,19 @@
 package com.example.loginregistersos;
 
-import android.Manifest;
-import android.app.AlertDialog;
-import android.app.ProgressDialog;
-import android.content.ContentValues;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -51,12 +37,12 @@ public class Register1 extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setDisplayShowHomeEnabled(true);
 
-        nameET = findViewById(R.id.editTextBuyerName);
-        idET = findViewById(R.id.editTextBuyerID);
-        phoneET = findViewById(R.id.editTextBuyerPhone);
-        addressET = findViewById(R.id.editTextBuyerAddress);
-        emailET = findViewById(R.id.editTextBuyerEmail);
-        passwordET = findViewById(R.id.editTextBuyerPassword);
+        nameET = findViewById(R.id.editTextName);
+        idET = findViewById(R.id.editTextID);
+        phoneET = findViewById(R.id.editTextPhone);
+        addressET = findViewById(R.id.editTextAddress);
+        emailET = findViewById(R.id.editTextEmail);
+        passwordET = findViewById(R.id.editTextPassword);
         registerBtn = findViewById(R.id.buttonRegister);
 
         mAuth = FirebaseAuth.getInstance();
@@ -127,7 +113,7 @@ public class Register1 extends AppCompatActivity {
             //set data to save
             HashMap<String, Object> hashMap = new HashMap<>();
             hashMap.put("uid",""+mAuth.getUid());
-            hashMap.put("accountType","Buyer");
+            hashMap.put("accountType","User");
             hashMap.put("name",""+name);
             hashMap.put("id",""+id);
             hashMap.put("phone",""+phone);
@@ -140,14 +126,14 @@ public class Register1 extends AppCompatActivity {
             databaseReference.child(mAuth.getUid()).setValue(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void aVoid) {
-                    Intent intentToMain = new Intent(Register1.this,MainActivity.class);
+                    Intent intentToMain = new Intent(Register1.this, LandingPage.class);
                     startActivity(intentToMain);
                     finish();
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
-                    Intent intentToMain = new Intent(Register1.this,MainActivity.class);
+                    Intent intentToMain = new Intent(Register1.this, LandingPage.class);
                     startActivity(intentToMain);
                     finish();
                 }
