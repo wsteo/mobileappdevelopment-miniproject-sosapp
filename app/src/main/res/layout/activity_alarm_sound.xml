@@ -34,27 +34,56 @@
         android:scaleY="5"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
-    <Button
-        android:id="@+id/btn_siren1"
+    <TextView
+        android:id="@+id/tv_hold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Press & Hold Sound:"
+        android:textColor="#DD1312"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/btn_siren1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="+ Yelp"
         android:layout_gravity="center"
         android:scaleX="1.8"
         android:scaleY="1.8"
+        android:textColor="@color/white"
+        app:backgroundTint="#009688"
 
         />
 
     <Button
         android:id="@+id/btn_siren2"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:text="+ Hi Lo"
+        android:textColor="@color/white"
+        app:backgroundTint="#009688"
         android:layout_gravity="center"
         android:scaleX="1.8"
         android:scaleY="1.8"
+        />
+
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Back"
+        android:layout_gravity="center"
+        android:scaleX="1.8"
+        android:scaleY="1.8"
+        android:textColor="@color/white"
+        app:backgroundTint="#C1144F"
         />
 
 
