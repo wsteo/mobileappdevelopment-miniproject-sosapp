@@ -18,7 +18,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LOGINREGISTERSOS">
-        <activity android:name=".Add_New_Receiver"></activity>
+        <activity android:name=".MainMenu"></activity>
+        <activity android:name=".Add_New_Receiver" />
         <activity android:name=".edit_delete_list" />
         <activity android:name=".Location_Receiver_List" />
         <activity android:name=".LocationMap" />
@@ -36,8 +37,8 @@
 
         <activity
             android:name=".gps"
-            android:label="@string/title_activity_gps"/>
-        <activity android:name=".EmergencyTutorialVideo"></activity>
+            android:label="@string/title_activity_gps" />
+        <activity android:name=".EmergencyTutorialVideo" />
         <activity android:name=".Login1" />
         <activity android:name=".Register1" />
         <activity android:name=".LandingPage">

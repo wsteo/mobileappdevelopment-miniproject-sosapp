@@ -87,7 +87,7 @@ public class Login1 extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
 
                             if (user.isEmailVerified()){
-                                Intent mainactivity = new Intent(Login1.this, LandingPage.class);
+                                Intent mainactivity = new Intent(Login1.this, MainMenu.class);
                                 startActivity(mainactivity);
                                 finish();
                             }
@@ -130,7 +130,8 @@ public class Login1 extends AppCompatActivity {
             public void onAuthenticationSucceeded(@NonNull @org.jetbrains.annotations.NotNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
 
-                textView.setText("Successful Verified!");
+                Intent intent2mainmenu = new Intent(Login1.this, MainMenu.class);
+                startActivity(intent2mainmenu);
             }
 
             @Override
