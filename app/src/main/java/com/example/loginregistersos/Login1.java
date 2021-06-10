@@ -3,6 +3,9 @@ package com.example.loginregistersos;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.biometric.BiometricManager;
+import androidx.biometric.BiometricPrompt;
+import androidx.core.content.ContextCompat;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -26,12 +29,17 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.concurrent.Executor;
+
 public class Login1 extends AppCompatActivity {
 
-    private TextView forgotTV,register;
+    private TextView register, textView;
     private EditText emailET,passwordET;
-    private Button loginBtn;
+    private Button loginBtn,authe;
     private FirebaseAuth mAuth;
+    private BiometricPrompt biometricPrompt;
+    private BiometricPrompt.PromptInfo promptInfo;
+    private Executor executor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +56,9 @@ public class Login1 extends AppCompatActivity {
         register = findViewById(R.id.textViewRegisterBuyer);
         loginBtn = findViewById(R.id.buttonLogIn);
         mAuth = FirebaseAuth.getInstance();
-
+        textView = findViewById(R.id.textView9);
+        executor = ContextCompat.getMainExecutor(this);
+        authe = findViewById(R.id.authenticate);
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,6 +123,46 @@ public class Login1 extends AppCompatActivity {
                 startActivity(intentToRegisterBuyer);
             }
         });
+
+        biometricPrompt = new BiometricPrompt(this, executor, new BiometricPrompt.AuthenticationCallback() {
+            @Override
+            public void onAuthenticationError(int errorCode, @NonNull @org.jetbrains.annotations.NotNull CharSequence errString) {
+                super.onAuthenticationError(errorCode, errString);
+                Toast.makeText(Login1.this, errString, Toast.LENGTH_SHORT).show();
+                textView.setText("Fail to Verify, Error!");
+            }
+
+            @Override
+            public void onAuthenticationSucceeded(@NonNull @org.jetbrains.annotations.NotNull BiometricPrompt.AuthenticationResult result) {
+                super.onAuthenticationSucceeded(result);
+
+                textView.setText("Successful Verified!");
+            }
+
+            @Override
+            public void onAuthenticationFailed() {
+                super.onAuthenticationFailed();
+
+                textView.setText("Failure");
+            }
+        });
+
+
+        promptInfo = new BiometricPrompt.PromptInfo.Builder()
+                .setTitle("SOS APPLICATION AUTHENTICATION")
+                .setNegativeButtonText("Cancel/ Use Password")
+                .setConfirmationRequired(false)
+                .build();
+    }
+
+    public void buttonAuthenticate(View view){
+        BiometricManager biometricManager = BiometricManager.from(this);
+        if (biometricManager.canAuthenticate() != BiometricManager.BIOMETRIC_SUCCESS){
+
+            textView.setText("Biometric Not Supported");
+            return;
+        }
+        biometricPrompt.authenticate(promptInfo);
     }
 
     @Override
