@@ -32,12 +32,12 @@
 
 
         <Button
-            android:id="@+id/btn_emergency"
+            android:id="@+id/btn_report"
             android:layout_width="300dp"
             android:layout_height="52dp"
             android:layout_marginLeft="15dp"
             android:textAllCaps="false"
-            android:text="Emergency Message"
+            android:text="Scammer Report"
             android:textSize="25dp"
             android:fontFamily="sans-serif-condensed-medium"
             android:textColor="@color/white"

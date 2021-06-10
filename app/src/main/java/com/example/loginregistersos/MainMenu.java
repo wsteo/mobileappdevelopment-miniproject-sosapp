@@ -11,14 +11,14 @@ import android.widget.Toast;
 
 public class MainMenu extends AppCompatActivity {
 
-    private Button emergency_msg, gps_location, sos_btn, siren_alarm, scammer, first_aid, exit;
+    private Button report, gps_location, sos_btn, siren_alarm, scammer, first_aid, exit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-        emergency_msg = findViewById(R.id.btn_emergency);
+        report = findViewById(R.id.btn_report);
         gps_location = findViewById(R.id.btn_gps);
         sos_btn = findViewById(R.id.btn_sos);
         siren_alarm = findViewById(R.id.btn_siren);
@@ -27,11 +27,11 @@ public class MainMenu extends AppCompatActivity {
         exit = findViewById(R.id.btn_exit);
 
 
-        emergency_msg.setOnClickListener(new View.OnClickListener() {
+        report.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent main2emergency = new Intent(MainMenu.this, Location_Receiver_List.class);
-                startActivity(main2emergency);
+                Intent main2report = new Intent(MainMenu.this, ReportPhone.class);
+                startActivity(main2report);
 
             }
         });
@@ -67,7 +67,7 @@ public class MainMenu extends AppCompatActivity {
         scammer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent main2scam = new Intent(MainMenu.this, Location_Receiver_List.class);
+                Intent main2scam = new Intent(MainMenu.this, Search_ScammerRecord.class);
                 startActivity(main2scam);
 
             }
