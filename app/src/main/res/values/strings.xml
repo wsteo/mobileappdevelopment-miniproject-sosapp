@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LOGINREGISTERSOS</string>
+    <string name="title_activity_gps">Map</string>
 </resources>

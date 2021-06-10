@@ -32,7 +32,7 @@
         android:layout_marginTop="75dp"
         android:scaleX="5"
         android:scaleY="5"
-        />
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <Button
         android:id="@+id/btn_siren1"

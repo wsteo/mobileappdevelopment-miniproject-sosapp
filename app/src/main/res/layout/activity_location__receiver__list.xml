@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FEDBE0"
+    tools:context=".Location_Receiver_List">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tv_receiver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="List of Your Receiver"
+            android:textColor="#C1144F"
+            android:textStyle="bold"
+
+            android:textSize="30dp"
+            />
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="73dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="15dp"
+            android:textAllCaps="false"
+            android:text="+Add"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            app:backgroundTint="#009688"/>
+
+    </LinearLayout>
+
+
+
+    <ListView
+        android:id="@+id/lv_viewReceiver"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="16dp"
+        android:dividerHeight="1dp"
+        android:layout_gravity="center"
+      />
+
+
+
+    <Button
+        android:id="@+id/btn_bck"
+        android:layout_width="300dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="52dp"
+        android:layout_marginLeft="15dp"
+        android:layout_gravity="center"
+        android:textAllCaps="false"
+        android:text="Back"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        app:backgroundTint="#C1144F"/>
+
+
+
+
+
+</LinearLayout>
