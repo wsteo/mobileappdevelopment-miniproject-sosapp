@@ -39,10 +39,23 @@ public class ReportPhone extends AppCompatActivity {
             database = FirebaseDatabase.getInstance();
             ref = database.getReference("Scammer");
 
-
             String phone= reportphone.getText().toString();
             String name= reportname.getText().toString();
 
+            if (phone.equals("") && !name.equals("") ){
+                Toast.makeText(ReportPhone.this,"Please enter a phone number",Toast.LENGTH_LONG).show();
+                return;
+            }
+
+            if (name.equals("") && !phone.equals("")){
+                Toast.makeText(ReportPhone.this,"Please enter a name",Toast.LENGTH_LONG).show();
+                return;
+            }
+
+            if (phone.equals("") || name.equals("")){
+                Toast.makeText(ReportPhone.this,"Please enter a name and phone number",Toast.LENGTH_LONG).show();
+                return;
+            }
 
             Scammer scammer = new Scammer(phone,name);
             ref.child(phone).setValue(scammer);
