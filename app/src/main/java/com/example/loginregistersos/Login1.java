@@ -7,7 +7,6 @@ import androidx.biometric.BiometricManager;
 import androidx.biometric.BiometricPrompt;
 import androidx.core.content.ContextCompat;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -23,11 +22,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.concurrent.Executor;
 
@@ -53,7 +47,7 @@ public class Login1 extends AppCompatActivity {
 
         emailET = findViewById(R.id.editTextLEmail);
         passwordET = findViewById(R.id.editTextLPassword);
-        register = findViewById(R.id.textViewRegisterBuyer);
+        register = findViewById(R.id.textViewRegister);
         loginBtn = findViewById(R.id.buttonLogIn);
         mAuth = FirebaseAuth.getInstance();
         textView = findViewById(R.id.textView9);
@@ -93,7 +87,7 @@ public class Login1 extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
 
                             if (user.isEmailVerified()){
-                                Intent mainactivity = new Intent(Login1.this,MainActivity.class);
+                                Intent mainactivity = new Intent(Login1.this, LandingPage.class);
                                 startActivity(mainactivity);
                                 finish();
                             }
@@ -119,8 +113,8 @@ public class Login1 extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentToRegisterBuyer = new Intent(Login1.this,Register1.class);
-                startActivity(intentToRegisterBuyer);
+                Intent intentToRegister = new Intent(Login1.this,Register1.class);
+                startActivity(intentToRegister);
             }
         });
 

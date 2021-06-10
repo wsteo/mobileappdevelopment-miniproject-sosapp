@@ -12,7 +12,7 @@
         <activity android:name=".EmergencyTutorialVideo"></activity>
         <activity android:name=".Login1" />
         <activity android:name=".Register1" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".LandingPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
