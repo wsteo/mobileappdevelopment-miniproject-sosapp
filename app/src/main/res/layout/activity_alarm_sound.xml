@@ -41,7 +41,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="80dp"
         android:fontFamily="sans-serif-black"
-        android:text="Press & Hold Sound:"
+        android:text="Press and Hold Sound:"
         android:textColor="#DD1312"
         android:textSize="15dp" />
 

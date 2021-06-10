@@ -36,7 +36,7 @@ public class Alarm_sound extends AppCompatActivity {
         lay_main = findViewById(R.id.lay);
         btn_siren1 = findViewById(R.id.btn_siren1);
         btn_siren2 = findViewById(R.id.btn_siren2);
-        btn_back = findViewById(R.id.btn_siren2);
+        btn_back = findViewById(R.id.btn_back);
 
         MediaPlayer mainSiren = MediaPlayer.create(this, main_sound);
 
