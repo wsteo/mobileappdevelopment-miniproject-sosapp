@@ -33,6 +33,7 @@ public class gps extends FragmentActivity implements OnMapReadyCallback {
     private ListHelper myDB;
     private LocationListener locationListener;
     private Button btn_help, btn_receive;
+    private Button btn_back;
 
     public String url,phoneNumber;
 
@@ -58,6 +59,7 @@ public class gps extends FragmentActivity implements OnMapReadyCallback {
 
         btn_help = findViewById(R.id.btn_Help);
         btn_receive= findViewById(R.id.btn_receiver);
+        btn_back = findViewById(R.id.btn_back);
 
         myDB = new ListHelper(this);
 
@@ -149,6 +151,16 @@ public class gps extends FragmentActivity implements OnMapReadyCallback {
 
             }
         });
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gps2main = new Intent(gps.this,MainMenu.class);
+                startActivity(gps2main);
+
+            }
+        });
+
 
 
 

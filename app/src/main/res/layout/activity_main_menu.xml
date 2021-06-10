@@ -114,7 +114,7 @@
             android:layout_gravity="center"
             android:textAllCaps="false"
             android:fontFamily="sans-serif-condensed-medium"
-            android:text="Exit"
+            android:text="Log Out"
             android:textSize="25dp"
             android:textColor="@color/white"
             app:backgroundTint="#C1144F"/>

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ public class Alarm_sound extends AppCompatActivity {
 
     private Switch switch_main;
     private Button btn_siren1,  btn_siren2;
+    private Button btn_back;
     private LinearLayout lay_main;
 
 
@@ -34,6 +36,7 @@ public class Alarm_sound extends AppCompatActivity {
         lay_main = findViewById(R.id.lay);
         btn_siren1 = findViewById(R.id.btn_siren1);
         btn_siren2 = findViewById(R.id.btn_siren2);
+        btn_back = findViewById(R.id.btn_siren2);
 
         MediaPlayer mainSiren = MediaPlayer.create(this, main_sound);
 
@@ -52,33 +55,14 @@ public class Alarm_sound extends AppCompatActivity {
                 }
             }
         });
-/*
-        btn_siren1.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    // start your timer
 
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    // stop your timer.
-
-                }
-                return false;
-            }
-        }); */
-/*
-        btn_siren1.setOnLongClickListener(new View.OnLongClickListener() {
+      btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onLongClick(View v) {
-                if (switch_main.isChecked()){
-                    siren1.start();
-                }else {
-                    siren1.pause();
-                    siren1.seekTo(0);
-                }
-                return false;
+            public void onClick(View v) {
+                Intent alarm2Main = new Intent(Alarm_sound.this,MainMenu.class);
+                startActivity(alarm2Main);
             }
-        }); */
+        });
 
         btn_siren1.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -112,20 +96,6 @@ public class Alarm_sound extends AppCompatActivity {
                 return false;
             }
         });
-
-        /*
-        switch_main.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                // do something, the isChecked will be
-                // true if the switch is in the On position
-                main_sound.start();
-            }
-        });*/
-
-
-
-
-
 
 
     }
