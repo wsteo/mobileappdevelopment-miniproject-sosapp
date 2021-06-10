@@ -14,7 +14,7 @@ package com.example.loginregistersos;
         import android.widget.RelativeLayout;
         import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class LandingPage extends AppCompatActivity {
 
     private SensorManager sensorManager;
     private Sensor lightSensor;
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentToLogin = new Intent(MainActivity.this,Login1.class);
+                Intent intentToLogin = new Intent(LandingPage.this,Login1.class);
                 startActivity(intentToLogin);
             }
         });
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentToRegister = new Intent(MainActivity.this, Register1.class);
+                Intent intentToRegister = new Intent(LandingPage.this, Register1.class);
                 startActivity(intentToRegister);
             }
         });

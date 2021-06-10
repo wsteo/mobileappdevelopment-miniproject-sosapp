@@ -37,6 +37,10 @@
         <activity
             android:name=".gps"
             android:label="@string/title_activity_gps">
+        <activity android:name=".EmergencyTutorialVideo"></activity>
+        <activity android:name=".Login1" />
+        <activity android:name=".Register1" />
+        <activity android:name=".LandingPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -44,10 +48,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Alarm_sound" />
-        <activity android:name=".EmergencyTutorialVideo" />
-        <activity android:name=".Login1" />
-        <activity android:name=".Register1" />
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
