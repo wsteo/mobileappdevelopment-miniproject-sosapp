@@ -100,9 +100,8 @@ public class MainMenu extends AppCompatActivity {
         sos_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String phone = "999";
-                Intent phoneIntent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
-                startActivity(phoneIntent);
+                Intent intent = new Intent(MainMenu.this, EmergencyCallButton.class);
+                startActivity(intent);
 
             }
         });

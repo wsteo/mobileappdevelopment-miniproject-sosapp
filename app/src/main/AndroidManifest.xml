@@ -10,7 +10,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SEND_SMS" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LOGINREGISTERSOS">
-        <activity android:name=".MainMenu"></activity>
+        <activity android:name=".EmergencyCallButton"></activity>
+        <activity android:name=".MainMenu" />
         <activity android:name=".Add_New_Receiver" />
         <activity android:name=".edit_delete_list" />
         <activity android:name=".Location_Receiver_List" />
@@ -41,11 +42,9 @@
             android:label="@string/title_activity_gps" />
         <activity android:name=".EmergencyTutorialVideo" />
         <activity android:name=".Login1" />
-        <activity android:name=".Register1" />
-        <!--<activity android:name=".MainActivity"/>-->
-        <activity android:name=".Search_ScammerRecord"/>
-        <activity android:name=".ReportPhone"/>
-        
+        <activity android:name=".Register1" /> <!-- <activity android:name=".MainActivity"/> -->
+        <activity android:name=".Search_ScammerRecord" />
+        <activity android:name=".ReportPhone" />
         <activity android:name=".LandingPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
