@@ -39,7 +39,7 @@
         android:layout_height="0dp"
         android:layout_marginBottom="23dp"
         android:drawablePadding="5dp"
-        android:hint="Student ID/Staff ID"
+        android:hint="IC number"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
         app:layout_constraintEnd_toEndOf="parent"
